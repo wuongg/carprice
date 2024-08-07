@@ -15,9 +15,6 @@ df.drop(columns='Unnamed: 0', inplace=True)
 X = df.drop(columns='Price')
 y = df['Price']
 
-# Chia dữ liệu
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
 # Tạo và huấn luyện mô hình
 ohe = OneHotEncoder()
 ohe.fit(X[['name', 'company', 'fuel_type']])
